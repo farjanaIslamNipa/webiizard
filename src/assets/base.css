@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+
+:root {
+  --brandColor: #0b193e;
+  --primaryColor: #dbb407;
+  --secondaryColor: #01c2cf;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.bg-brand{
+  background-color: var(--brandColor);
+}
+.bg-app-primary{
+  background-color: var(--primaryColor);
+}
+.bg-app-secondary{
+  background-color: var(--secondaryColor);
+}
+.text-brand{
+  color: var(--brandColor);
+}
+.text-app-primary{
+  color: var(--primaryColor);
+}
+.text-app-secondary{
+  color: var(--secondaryColor);
+}
+

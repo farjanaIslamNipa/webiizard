@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-link{
+    @apply text-appSecondary hover:text-appPrimary transition-colors delay-150 ease-out relative py-5 px-1
+}
+.menu-link::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    left: 50%;
+    bottom:0;
+    background-color: var(--primaryColor);
+    transition: all ease-in-out .2s;
+    border-radius: 1px;
+  }
+
+  .active-menu{
+    color: var(--primaryColor);
+  }
+
+  .active-menu::after{
+    width: 100%;
+    left: 0;
+  }
