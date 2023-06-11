@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .menu-link{
-    @apply text-appSecondary hover:text-appPrimary transition-colors delay-150 ease-out relative py-7 px-1
+    @apply text-appSecondary hover:text-appPrimary transition-colors delay-150 ease-out relative py-3 px-1
 }
 .menu-link::after{
     content: '';
