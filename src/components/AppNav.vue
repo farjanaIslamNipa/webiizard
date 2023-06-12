@@ -1,5 +1,5 @@
 <template>
-    <!-- 
+ <!-- 
       KEYWORDS TO FIND SECTIONS EASILY 
     
       LOGO AND HAMBURGER SECTION
@@ -13,7 +13,7 @@
       LANGUAGE SECTION
     
     -->
-      <div id="nav-height" :class="props.sticky ? 'fixed top-0 w-full z-50' : 'relative'">
+    <div id="nav-height" :class="props.sticky ? 'fixed top-0 w-full z-50' : 'relative'">
         <div 
         class="z-50" 
         :class="
@@ -24,7 +24,7 @@
         props.navItems.customClass?.customNav ? props.navItems.customClass.customNav : ''
         ">
           <div class="flex w-full gap-12 items-center">
-            <div class="" :class="screenSize === props.mediaScreen ? '' : ''">
+            <div class="w-full" :class="screenSize === props.mediaScreen ? 'md:w-[20%]' : 'lg:w-[30%]'">
               <div class="flex justify-between items-center">
                 <div>
                   <router-link to="/" >
@@ -40,20 +40,22 @@
                 <div class="-mr-2 -my-2" :class="screenSize === props.mediaScreen ? 'md:hidden' : 'lg:hidden'">
                   <button
                     type="button"
-                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+                    class=""
                     :class="props.navItems.customClass?.customHamburgerIcon ? props.navItems.customClass?.customHamburgerIcon : ''"
                     @click="openNav">
                     <span class="sr-only">Open menu</span>
                     <img v-if="props.navItems?.hamburgerIcon"
-                        :class="props.navItems?.hamIconHeight ? props.navItems?.hamIconHeight : 'h-5',
-                          props.navItems?.hamIconWidth ? props.navItems?.hamIconWidth : 'w-5'"
+                        :class="props.navItems?.hamIconHeight ? props.navItems?.hamIconHeight : 'h-6',
+                          props.navItems?.hamIconWidth ? props.navItems?.hamIconWidth : 'w-6'"
                           :src="props.navItems?.hamburgerIcon" alt="Jatri Menu">
                     <svg v-else
-                      class="h-6 w-6"
+                      class="inline-block"
+                      :class="props.navItems?.hamIconHeight ? props.navItems?.hamIconHeight : 'h-8',
+                          props.navItems?.hamIconWidth ? props.navItems?.hamIconWidth : 'w-8'"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke="currentColor"
+                      stroke="#dbb407"
                       aria-hidden="true"
                     >
                       <path
@@ -158,31 +160,14 @@
                     </router-link>
                   </nav>
 
-                  <div v-if="navItems?.languages || navItems?.specialLinkOne || navItems?.specialLinkTwo">
-                    <div class="gap-x-0 md:gap-x-3 xl:gap-x-6 items-center" :class="screenSize === mediaScreen ? 'md:flex' : 'lg:flex'">
-                      <div v-if="navItems?.specialLinkOne" class="mb-3 lg:mb-0">
-                        <a
-                        :href="navItems.specialLinkOne?.link"
-                        target="_blank"
-                        class="flex justify-center items-center text-base leading-6 font-medium capitalize"
-                        :class="navItems.specialLinkOne?.class, navItems.customClass?.customSpecialLinkOne">
-                        <div class="flex gap-x-2 items-center">
-                          <img v-if="navItems.specialLinkOne?.icon" :src="navItems.specialLinkOne.icon" :alt="navItems.specialLinkOne?.name">
-                          <span>{{ navItems.specialLinkOne?.name }}</span>
-                        </div>
-                        </a>
-                      </div>
-                      <div v-if="navItems?.specialLinkTwo">
-                        <a
-                        :href="navItems.specialLinkTwo.link"
-                         target="_blank"
-                         class="flex justify-center items-center text-base leading-6 font-medium capitalize"
-                        :class="navItems.specialLinkTwo?.class, navItems.customClass?.customSpecialLinkTwo">
-                          <div class="flex gap-x-2">
-                            <img v-if="navItems.specialLinkTwo?.icon" :src="navItems.specialLinkTwo?.icon" :alt="navItems.specialLinkTwo?.name">
-                            <span>{{ navItems.specialLinkTwo?.name }}</span>
-                          </div>
-                        </a>
+                  <div>
+                    <div class="flex gap-2 items-center">
+                      <p class="text-white text-sm">Find Us:</p>
+                      <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-5 h-5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        <a href="tel:01700557663" class="text-white text-sm">01700557663</a>
                       </div>
                     </div>
                   </div>
@@ -192,11 +177,11 @@
           </div>
         </div>
       </div>
-      <div v-if="props.sticky" id="adjust-spacing"></div>
-    </template>
-<script setup>
-import { ref } from 'vue';
+    <div v-if="props.sticky" id="adjust-spacing"></div>
+</template>
 
+<script setup>
+import {ref} from 'vue'
 const props = defineProps({
   navItems: Object,
   webLanguage: String,
@@ -233,5 +218,61 @@ if(props.sticky === true){
     const navHeight = document.getElementById('nav-height').getBoundingClientRect().height
     document.getElementById('adjust-spacing').style.height = navHeight + 'px'
   }
-};
+}
 </script>
+
+<style scoped>
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.language-item:last-child div span{
+  border-bottom: none !important;
+}
+
+@media(min-width:1024px){
+ .full-width{
+  width: 70% !important;
+  height: auto;
+ }
+}
+@media(max-width:1023px){
+  .nav-item-container{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  .left-nav{
+    left: 0;
+  }
+  .right-nav{
+    right: 0;
+  }
+}
+
+@media(min-width:768px){
+ .md-full-width{
+  width: 80% !important;
+  height: auto;
+ }
+
+}
+@media(max-width:767px){
+  .md-nav-item-container{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+}
+</style>

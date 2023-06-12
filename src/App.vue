@@ -49,12 +49,6 @@ const navItems = {
     logoAlt: 'Webiizard Logo',
     logoHeight: 'h-9',
     logoWidth: 'w-auto',
-    hamburgerIcon:'/images/hamburger-icon.svg',
-    hamIconHeight: 'h-5',
-    hamIconWidth: 'w-5',
-    closeIcon: '/images/close-icon.svg',
-    closeIconHeight: 'h-4',
-    closeIconWidth: 'w-4',
 
 //   Special Link Options
     specialLinkOne: {
@@ -90,7 +84,7 @@ const navItems = {
    expandFrom="left" 
   :hasBorder="false" 
   :hasShadow="true" 
-  :sticky="true"
+  :sticky="false"
    mediaScreen="lg"
   />
   <RouterView />
