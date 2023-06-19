@@ -18,7 +18,7 @@
         class="z-50" 
         :class="
         props.navItems?.navBg ? props.navItems.navBg : 'bg-white',
-        props.navItems?.navPadding ? props.navItems.navPadding : 'py-4 md:py-6 px-4 md:px-10 lg:px-[60px] xl:px-[100px] 2xl:px-[200px]',
+        props.navItems?.navPadding ? props.navItems.navPadding : 'px-4 md:px-10 lg:px-[60px] xl:px-[100px] 2xl:px-[200px]',
         (props.hasBorder ? (props.navItems.bottomBorder ? props.navItems?.bottomBorder : 'border-b-2 border-gray-100') : ''),
         (props.hasShadow ? (`${props.navItems?.bottomShadow ? props.navItems.bottomShadow : 'shadow-md'} border-none`) : '') ,
         props.navItems.customClass?.customNav ? props.navItems.customClass.customNav : ''
@@ -26,7 +26,7 @@
           <div class="flex w-full gap-12 items-center">
             <div class="w-full" :class="screenSize === props.mediaScreen ? 'md:w-[20%]' : 'lg:w-[30%]'">
               <div class="flex justify-between items-center">
-                <div>
+                <div class="bg-brand px-4 py-4 md:py-5">
                   <router-link to="/" >
                     <img class="inline-block" :class="
                           props.navItems.logoHeight ? props.navItems.logoHeight : 'h-10',
@@ -162,12 +162,12 @@
 
                   <div>
                     <div class="flex gap-2 items-center">
-                      <p class="text-white text-sm">Find Us:</p>
+                      <p class="text-brand text-sm font-bold">Find Us:</p>
                       <div class="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-5 h-5">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                         </svg>
-                        <a href="tel:01700557663" class="text-white text-sm">01700557663</a>
+                        <a href="tel:01700557663" class="text-brand text-sm">01700557663</a>
                       </div>
                     </div>
                   </div>

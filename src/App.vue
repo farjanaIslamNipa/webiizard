@@ -33,7 +33,7 @@ const navItems = {
     linkClasses:{
         fontSize:'text-base',
         fontWeight:'font-medium',
-        color:'text-white',
+        color:'text-brand',
         display:'block lg:inline-block',
         hoverColor:'hover:text-[#f04935]',
         activeClass:'active-nav',
@@ -41,13 +41,11 @@ const navItems = {
     },
 
 //  General options
-    navBg:'bg-brand',
-    smallNavBg:'bg-brand',
     bottomBorder: 'border-b-2 border-gray-100',
     bottomShadow: 'shadow-md',
     logoSrc: '/images/brand-logo.png',
     logoAlt: 'Webiizard Logo',
-    logoHeight: 'h-9',
+    logoHeight: 'h-7',
     logoWidth: 'w-auto',
 
 //   Special Link Options
