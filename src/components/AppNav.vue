@@ -26,7 +26,7 @@
           <div class="flex w-full gap-12 items-center">
             <div class="w-full" :class="screenSize === props.mediaScreen ? 'md:w-[20%]' : 'lg:w-[30%]'">
               <div class="flex justify-between items-center">
-                <div class="bg-brand px-4 py-4 md:py-5">
+                <div class="bg-brand px-3 lg:px-4 py-3 md:py-4 lg:py-5">
                   <router-link to="/" >
                     <img class="inline-block" :class="
                           props.navItems.logoHeight ? props.navItems.logoHeight : 'h-10',
@@ -55,7 +55,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke="#dbb407"
+                      stroke="#0b193e"
                       aria-hidden="true"
                     >
                       <path
@@ -81,7 +81,7 @@
               >
               <div
               @click="preventClosing"
-              class="py-8 w-[70%] sm:w-[60%]"
+              class=" w-[70%] sm:w-[60%]"
               :class="
               screenSize === props.mediaScreen ? 'h-screen md:h-auto' : ' h-screen lg:h-auto',
               props.expandFrom === 'right' ? 'ml-auto' : '',
@@ -89,8 +89,8 @@
               screenSize === props.mediaScreen ? `md:${props.navItems.smallNavBg ? props.navItems.smallNavBg : 'bg-white'} md:w-full md:py-0` : `lg:${navItems.smallNavBg} lg:py-0 md:w-[40%] lg:w-full`
               ">
                 <div class="block" :class="screenSize === props.mediaScreen ? 'md:hidden' : 'lg:hidden'">
-                  <div class="flex justify-between">
-                    <div class="pl-8 pb-6">
+                  <div class="flex justify-between bg-brand px-2 py-3">
+                    <div class="pl-4">
                       <router-link to="/">
                         <img :class="
                         props.navItems?.logoHeight ? props.navItems?.logoHeight : 'h-9',
@@ -100,7 +100,7 @@
                         :alt="props.navItems.logoAlt ? props.navItems.logoAlt : 'Webiizard Logo'"/>
                       </router-link>
                     </div>
-                    <div class="absolute right-4 md:right-9 top-6 md:top-7">
+                    <div class="absolute right-3 md:right-9 top-3 md:top-7">
                       <button
                         type="button"
                         class="bg-white rounded-md inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
@@ -118,7 +118,7 @@
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke="currentColor"
+                          stroke="#0b193e"
                           aria-hidden="true"
                         >
                         <path

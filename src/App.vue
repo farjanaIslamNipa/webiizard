@@ -37,7 +37,7 @@ const navItems = {
         display:'block lg:inline-block',
         hoverColor:'hover:text-[#f04935]',
         activeClass:'active-nav',
-        customClass:'menu-link'
+        customClass:'custom-link'
     },
 
 //  General options
@@ -45,7 +45,7 @@ const navItems = {
     bottomShadow: 'shadow-md',
     logoSrc: '/images/brand-logo.png',
     logoAlt: 'Webiizard Logo',
-    logoHeight: 'h-7',
+    logoHeight: 'h-6 lg:h-7',
     logoWidth: 'w-auto',
 
 //   Special Link Options
@@ -77,8 +77,7 @@ const navItems = {
 
 <template>
   <AppNav 
-  :navItems="navItems"
-   webLanguage="English" 
+  :navItems="navItems" 
    expandFrom="left" 
   :hasBorder="false" 
   :hasShadow="true" 
@@ -88,9 +87,12 @@ const navItems = {
   <RouterView />
 </template>
 
-<style scoped>
+<style>
 .active-nav{
   color: #f04935 !important;
   font-weight: 700 !important;
+}
+.custom-nav{
+  padding-left: 0 !important;
 }
 </style>
