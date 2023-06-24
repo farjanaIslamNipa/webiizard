@@ -24,6 +24,8 @@
                 </svg>
                 <a href="tel:01700557663" class="text-white text-sm">01700557663</a>
               </div>
+              <a href="#" target="_blank" hover:opacity-50><img src="/images/facebook.svg" alt=""></a>
+              <a href="#" target="_blank" hover:opacity-50><img src="/images/linkedin.svg" alt=""></a>
             </div>
           </div>
         </div>
