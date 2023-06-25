@@ -100,7 +100,7 @@
                         :alt="props.navItems.logoAlt ? props.navItems.logoAlt : 'Webiizard Logo'"/>
                       </router-link>
                     </div>
-                    <div class="absolute right-3 md:right-9 top-3 md:top-7">
+                    <div class="absolute right-3 md:right-9 top-3 md:top-4">
                       <button
                         type="button"
                         class="bg-white rounded-md inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
@@ -134,7 +134,7 @@
                 </div>
 
                 <div
-                class="items-center pl-8 xl:pl-0"
+                class="items-center pl-8 xl:pl-0 pt-8 lg:pt-0"
                 :class="
                 screenSize === props.mediaScreen ? 'md:flex' : 'lg:flex',
                 ( props.navItems?.specialLinkOne || props.navItems?.specialLinkTwo) ? 'justify-between' : 'justify-end'
@@ -160,7 +160,7 @@
                     </router-link>
                   </nav>
 
-                  <div class="">
+                  <div class="pt-4 lg:pt-0">
                     <div class="flex gap-2 items-center">
                       <p class="text-brand text-sm font-bold">Find Us:</p>
                       <div class="flex items-center gap-1">

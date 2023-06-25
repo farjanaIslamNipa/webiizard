@@ -92,7 +92,9 @@ const navItems = {
   color: #f04935 !important;
   font-weight: 700 !important;
 }
-.custom-nav{
+@media(max-width:767px){
+  .custom-nav{
   padding-left: 0 !important;
+}
 }
 </style>
